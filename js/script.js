@@ -84,8 +84,8 @@ function saveTask() {
 
 // A função 'removeTask' recebe um parâmetro: 'taskElement'
 function removeTask(taskElement) {
-    // Exibe uma caixa de diálogo de confirmação para o usuário com a mensagem 'Tem certeza que deseja remover?'
-    const confirmRemove = confirm('Tem certeza que deseja remover?');
+    // Exibe uma caixa de diálogo de confirmação para o usuário
+    const confirmRemove = confirm('Remover?');
     // Se o usuário clicar em 'OK' na caixa de diálogo de confirmação, 'confirmRemove' será verdadeiro
     if (confirmRemove) {
         // Remove o elemento 'taskElement' do DOM
