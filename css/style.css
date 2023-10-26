@@ -84,42 +84,6 @@ header {
 
 }
 
-@keyframes shake {
-    0% {
-        transform: translateX(0);
-    }
-
-    25% {
-        transform: translateX(-1 px);
-    }
-
-    50% {
-        transform: translateX(2px);
-    }
-
-    75% {
-        transform: translateX(-2px);
-    }
-
-    100% {
-        transform: translateX(1px);
-    }
-}
-
-.color-switcher .theme-buttons-container .theme-buttons {
-    display: flex;
-    margin: -1px 6px;
-    height: 3rem;
-    width: 3rem;
-    border-radius: 50%;
-    cursor: pointer;
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-    transition: transform 0.2s ease;
-}
-
-.color-switcher .theme-buttons-container .theme-buttons:hover {
-    animation: shake 0.6s ease;
-}
 
 .columns {
     display: flex;
@@ -287,55 +251,6 @@ button:hover {
     .color-switcher:hover {
         transform: scale(1.01);
     }
-
-    .color-switcher.active {
-        right: 0px;
-    }
-
-    .color-switcher .switcher-btn {
-        position: absolute;
-        top: -1.7px;
-        left: -83px;
-        background: #ffffff;
-        padding: 10px 20px;
-        cursor: pointer;
-        font-size: 35px;
-        border-radius: 5px;
-        border: solid 2px;
-
-
-    }
-
-    .color-switcher .theme-buttons-container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        height: 42px;
-
-    }
-
-    @keyframes shake {
-        0% {
-            transform: translateX(0);
-        }
-
-        25% {
-            transform: translateX(-1 px);
-        }
-
-        50% {
-            transform: translateX(2px);
-        }
-
-        75% {
-            transform: translateX(-2px);
-        }
-
-        100% {
-            transform: translateX(1px);
-        }
-    }
-
     .color-switcher .theme-buttons-container .theme-buttons {
         display: flex;
         margin: -1px 6px;
@@ -347,27 +262,8 @@ button:hover {
         transition: transform 0.2s ease;
     }
 
-    .color-switcher .theme-buttons-container .theme-buttons:hover {
-        animation: shake 0.6s ease;
-    }
-
 }
 
-
-/* tablet */
-@media (min-width: 768px) and (max-width: 1024px) {
-    .columns {
-        flex-direction: row;
-        width: 100%;
-    }
-
-    .column {
-        width: 50%;
-    }
-}
-
-
-/* desktop */
 @media (min-width: 1024px) {
     .columns {
         flex-direction: row;

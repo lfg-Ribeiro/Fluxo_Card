@@ -1,4 +1,4 @@
-// A função 'createTaskElement' recebe três parâmetros: 'name', 'description' e 'columnId'
+
 function createTaskElement(name, description, columnId) {
     // Cria um novo elemento 'div' e o armazena na constante 'taskElement'
     const taskElement = document.createElement('div');
@@ -8,8 +8,7 @@ function createTaskElement(name, description, columnId) {
     taskElement.innerHTML = `
         <h3 class="taskTitle">${name}</h3>
         <p class="taskDescription">${description}</p>
-        <button onclick="removeTask(parentElement)">X Remover</button>
-    `;
+        <button onclick="removeTask(parentElement)">X Remover</button>`;
     // Torna o elemento 'taskElement' arrastável
     taskElement.draggable = true;
     // Define o id do elemento 'taskElement' como 'taskElement-' seguido da data e hora atual em milissegundos
@@ -91,10 +90,8 @@ function removeTask(taskElement) {
         // Remove o elemento 'taskElement' do DOM
         taskElement.remove();
         // Chama a função 'saveTask' para atualizar o armazenamento local após a remoção da tarefa
-        saveTask();
     }
-    // Exibe no console o elemento 'taskElement'
-    console.log(taskElement);
+
 }
 
 // A função 'loadTasks' não recebe nenhum parâmetro
@@ -129,22 +126,9 @@ function loadTasks() {
 }
 
 
-// A função 'allowDrop' impede que o comportamento padrão do navegador ocorra quando um elemento é arrastado sobre outro
-function allowDrop(event) {
-    console.log("allowDrop+");
-    // O método 'preventDefault' impede que o comportamento padrão do navegador ocorra
-    event.preventDefault();
-}
-
 // A função 'dragStart' é chamada quando o usuário começa a arrastar um elemento
 function dragStart(event) {
-    console.log("Dragstart");
-    // Exibe no console o objeto do evento
-    console.log(event);
-    // Exibe no console o id do elemento que está sendo arrastado
-    console.log(`Dragging ID: ${event.target.id}`);
-    // O método 'setData' define os dados que serão transferidos durante a operação de arrastar e soltar.
-    // Neste caso, o id do elemento que está sendo arrastado é definido como os dados a serem transferidos.
+   
     event.dataTransfer.setData("text/plain", event.target.id);
 }
 
@@ -167,7 +151,6 @@ function drop(ev) {
         );
         targetColumn.querySelector('.taskContainer').appendChild(newTask);
         draggedElement.parentElement.removeChild(draggedElement);
-        saveTask();
     }
 
 }
@@ -175,10 +158,7 @@ function drop(ev) {
 function drag(ev) {
     ev.dataTransfer.setData("text", ev.target.id);
 }
-// Enquanto a coluna alvo não for nula e não tiver a classe 'column', procura pelo seu elemento pai
-while (targetColumn && !targetColumn.classList.contains('column')) {
-    targetColumn = targetColumn.parentElement;
-}
+
 
 // Se a coluna alvo existir, executa os seguintes passos
 if (targetColumn) {
@@ -192,8 +172,7 @@ if (targetColumn) {
     targetColumn.querySelector('.taskContainer').appendChild(newTask);
     // Remove o elemento arrastado do seu contêiner original
     draggedElement.parentElement.removeChild(draggedElement);
-    // Salva a tarefa no armazenamento local
-    saveTask();
+ 
 }
 
 loadTasks();
