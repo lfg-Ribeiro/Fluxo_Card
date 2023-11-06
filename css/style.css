@@ -18,14 +18,13 @@ body {
     text-transform: uppercase;
     transition: all .2s linear;
     margin: 0 0 8px;
-
 }
 
-.titulo{
-margin-top: 1rem;
-margin-left: -10rem;
-display: flex;
-justify-content: center;
+.titulo {
+    margin-top: 1rem;
+    margin-left: -10rem;
+    display: flex;
+    justify-content: center;
 }
 
 header {
@@ -51,7 +50,6 @@ header {
     border: solid 2px;
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
     transition: transform 0.5s ease;
-
 }
 
 .color-switcher:hover {
@@ -73,7 +71,6 @@ header {
     border-radius: 5px;
     border: solid 2px;
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-
 }
 
 .color-switcher .theme-buttons-container {
@@ -81,7 +78,6 @@ header {
     flex-wrap: wrap;
     justify-content: center;
     height: 42px;
-
 }
 
 
@@ -115,9 +111,11 @@ input{
     margin-bottom: 20px;
     border-bottom: 3px solid #818181;
 }
+
 .input{
     border: 1px solid #f96d00;
 }
+
 #todo-name,
 #done-name,
 #inProgress-name {
@@ -198,7 +196,7 @@ button:hover {
     background: #565656;
 }
 
-/* celular */
+/* Mobile */
 @media (max-width: 768px) {
     .header {
         background-color: #E2E3E5;
@@ -216,11 +214,9 @@ button:hover {
         height: auto;
         margin-top: -10px;
         padding-inline-start: -10px;
-
     }
 
     .columns {
-
         padding: 20px;
         display: flex;
         flex-wrap: wrap;
@@ -245,12 +241,12 @@ button:hover {
         z-index: 1000;
         color: var(--main-color);
         transition: transform 0.5s ease;
-
     }
 
     .color-switcher:hover {
         transform: scale(1.01);
     }
+
     .color-switcher .theme-buttons-container .theme-buttons {
         display: flex;
         margin: -1px 6px;
@@ -258,10 +254,8 @@ button:hover {
         width: 3rem;
         border-radius: 50%;
         cursor: pointer;
-
         transition: transform 0.2s ease;
     }
-
 }
 
 @media (min-width: 1024px) {
